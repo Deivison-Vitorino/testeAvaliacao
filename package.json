@@ -1,0 +1,18 @@
+{
+  "name": "testeavaliacao",
+  "version": "1.0.0",
+  "description": "Tesde de Avaliação final do curso NODE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Deivison",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
