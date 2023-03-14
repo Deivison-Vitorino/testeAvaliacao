@@ -1,7 +1,6 @@
 const { Router } = require('express');
 const route = Router();
 
-
 /** Rota contém todas as tarefas */
 route.get('/', (req, res) => {
     res.json('Todas as tarefas');
