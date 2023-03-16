@@ -1,29 +1,24 @@
 const { Router } = require('express');
+
+const tarefaController = require('../controllers/tarefaController')
+
+
 const route = Router();
 
+
 /** Rota contém todas as tarefas */
-route.get('/', (req, res) => {
-    res.json('Todas as tarefas');
-});
+route.get('/', tarefaController.paginaDeTarefas);
 
 /** Rota de buscar tarefa por ID passado. */
-route.get('/:id', (req, res) => {
-    res.json('Tarefa com id epecífico');
-});
+route.get('/:id', tarefaController.buscaTarefaIdController);
 
 /** Rota de cadastro de tarefas. */
-route.post('/cadastro', (req, res) => {
-    res.json('Tarefa cadastrada');
-});
+route.post('/cadastro', tarefaController.cadastroTarefaController);
 
 /** Rota de atualizar ifomações da tarefa com ID passado. */
-route.patch('/:id', (req, res) => {
-    res.json('Tarefa atualizada');
-});
+route.patch('/:id', tarefaController.atualizaTarefaCntroller);
 
 /** Rota de deletar um tarefa com ID passado */
-route.delete('/:id', (req, res) => {
-    res.json('Tarefa excluida');
-});
+route.delete('/:id', tarefaController.apagaTarefaController);
 
 module.exports = route;
